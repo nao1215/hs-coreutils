@@ -20,9 +20,19 @@ category:           Development
 extra-source-files:
     CHANGELOG.md
     README.md
+    LICENSE
 
 executable true
-    main-is:             src/true.hs
+    main-is:             src/shellutils/true/true.hs
     build-depends:       base >=4.9,bytestring>=0.10.8.1
     default-language:    Haskell2010
     ghc-options:         -Wall -O3 -rtsopts
+
+test-suite true-test
+    hs-source-dirs:      test/shellutils/true/
+    main-is:             trueSpec.hs
+    type:                exitcode-stdio-1.0
+    default-language:    Haskell2010
+    ghc-options:         -Wall
+    build-tool-depends: hspec-discover:hspec-discover == 2.*
+    build-depends: base,  hspec, hspec-core

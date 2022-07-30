@@ -2,13 +2,16 @@ build: ## Build coreutils written in haskell
 	stack build
 
 clean: ## Clean project
-	rm -rf .stack-work
+	rm -rf .stack-work haddock
 
 doc:  ## Generate haddock document
 	stack haddock --haddock-arguments --odir=haddock
 
 install: ## Install coreutils written in haskell
 	stack install
+
+test: ## Unit test
+	stack test
 
 .DEFAULT_GOAL := help
 help:  
