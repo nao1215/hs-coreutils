@@ -37,6 +37,8 @@ $ make install
 First off, thanks for taking the time to contribute!   
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information. Contributions are not only related to development. For example, GitHub Star motivates me to develop!! Haskell is a difficult language, so if you could show your support with a GitHub Star, it would keep me motivated.
 
+[![Star History Chart](https://api.star-history.com/svg?repos=nao1215/hs-coreutils&type=Date)](https://star-history.com/#nao1215/hs-coreutils&Date)
+
 
 ## Contact
 If you would like to send comments such as "find a bug" or "request for additional features" to the developer, please use one of the following contacts.
