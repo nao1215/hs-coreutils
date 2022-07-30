@@ -4,18 +4,24 @@ hs-coreutils is coreutils (UNIX/Linux basic commands) written in haskell. I crea
   
 # How to install
 ## Build dependency
-- ghc (Glasgow Haskell Compiler, recommend ver 8.8.4)
-- cabal (recommend ver 2.4.0)
-- stack (recommend ver 2.7.3)
-- make (recommend ver 4.3)
+|tool name|recommend ver|role|
+|:--|:--|:--|
+|ghc (Glasgow Haskell Compiler)| 8.8.4| compiler|
+|cabal|2.4.0|building & packaging system|
+|stack|2.7.3|haskell tool stack|
+|ghcup| 0.1.18.0|GHCup Haskell installe|
+|hspec|2.10.0|testing framework|
+|hspec-discover|2.10.0|Automatically discover and run Hspec tests|
+|make|4.3|utility to maintain groups of programs|
 
 ## Tool Installation (example)
 It is recommended that tools related to Haskell be installed using ghcup.
 
 ```shell
 $ sudo apt install make curl
-
 $ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+$ stack install hspec
+$ stack install hspec-discover
 ```
 
 ## Build & Install
