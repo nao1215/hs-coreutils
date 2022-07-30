@@ -1,8 +1,18 @@
+{-|
+Module      : Main
+Description : true command main module in hs-coreutils
+Copyright   : (c) Naohiro CHIKAMATSU, 2022
+License     : MIT
+Maintainer  : n.chika156@gmail.com
+Stability   : experimental
+Portability : POSIX
+-}
 module Main where
 
 import System.Environment
 import System.Exit
 
+-- |The 'usage' print usage mesage for true command.
 usage :: IO ()
 usage =
   putStrLn
@@ -16,9 +26,11 @@ usage =
     \URL   :https://github.com/nao1215/hs-coreutils\n\
     \Author: Naohiro CHIKAMATSU"
 
+-- |The 'version' print true command version.
 version :: IO ()
 version = putStrLn "version 0.1.0"
 
+-- |The 'main' is entrypoint for true command.
 main :: IO ()
 main = do
   args <- getArgs
