@@ -2,10 +2,11 @@ build: ## Build coreutils written in haskell
 	stack build
 
 clean: ## Clean project
-	rm -rf .stack-work haddock dist-newstyle
+	stack clean
+	rm -rf .stack-work haddock dist-newstyle docs
 
 doc:  ## Generate haddock document
-	stack haddock --haddock-arguments --odir=haddock
+	stack haddock --haddock-arguments "--odir=./docs"
 
 install: ## Install coreutils written in haskell
 	stack install
