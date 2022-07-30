@@ -1,3 +1,4 @@
+[![Build](https://github.com/nao1215/hs-coreutils/actions/workflows/haskell.yml/badge.svg)](https://github.com/nao1215/hs-coreutils/actions/workflows/haskell.yml)
 # hs-coreutils
 hs-coreutils is coreutils (UNIX/Linux basic commands) written in haskell. I created this project to learn haskell, so there is no advantage over coreutils written in other programming languages:) A similar side project is [mimixbox](https://github.com/nao1215/mimixbox), which implements busybox in golang.
   
