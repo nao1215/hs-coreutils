@@ -31,6 +31,7 @@ $ make install
 ## Implemented commands
 
 |command name|description|
+|:--|:--|
 |true| always return true(success exit code)|
 
 ## Contributing
