@@ -1,2 +1,2 @@
-# hs-coreutils
-hs-coreutils: coreutils written in haskell
+# hs-coreutils: coreutils written in haskell
+
