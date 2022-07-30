@@ -1,6 +1,9 @@
 build: ## Build coreutils written in haskell
 	stack build
 
+install: ## Install coreutils written in haskell
+	stack install
+
 doc:  ## Generate haddock document
 	stack haddock --haddock-arguments --odir=haddock
 
