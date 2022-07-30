@@ -40,6 +40,7 @@ $ make install
 |command name|description|
 |:--|:--|
 |true| always return true(success exit code)|
+|false| always return false(failure exit code)|
 
 ## Contributing
 First off, thanks for taking the time to contribute!   
