@@ -2,35 +2,33 @@ cabal-version:      2.4
 name:               hs-coreutils
 version:            0.1.0.0
 synopsis:           coreutils written in haskell
-
--- A longer description of the package.
--- description:
+description:        https://github.com/nao1215/hs-coreutils/blob/main/README.md
 homepage:           https://github.com/nao1215/hs-coreutils
-
--- A URL where users can report bugs.
--- bug-reports:
 license:            MIT
 license-file:       LICENSE
+copyright:          © CHIKAMATSU Naohiro, 2022
 author:             CHIKAMATSU Naohiro
 maintainer:         n.chika156@gmail.com
+category:           Utility
+build-type:         Simple
 
--- A copyright notice.
--- copyright:
-category:           Development
 extra-source-files:
     CHANGELOG.md
     README.md
     LICENSE
 
 executable true
-    main-is:             src/shellutils/true/true.hs
-    build-depends:       base >=4.9,bytestring>=0.10.8.1
+    hs-source-dirs:      src/true
+    main-is:             main.hs
+    other-modules:       True
+    build-depends:       base >=4.9, bytestring>=0.10.8.1
     default-language:    Haskell2010
     ghc-options:         -Wall -O3 -rtsopts
 
 test-suite true-test
-    hs-source-dirs:      test/shellutils/true/
+    hs-source-dirs:      test/true, src/true
     main-is:             trueSpec.hs
+    other-modules:       True
     type:                exitcode-stdio-1.0
     default-language:    Haskell2010
     ghc-options:         -Wall
@@ -38,16 +36,19 @@ test-suite true-test
     build-depends: base,  hspec, hspec-core
 
 executable false
-    main-is:             src/shellutils/false/false.hs
-    build-depends:       base >=4.9,bytestring>=0.10.8.1
+    hs-source-dirs:      src/false
+    main-is:             main.hs
+    other-modules:       False
+    build-depends:       base >=4.9, bytestring>=0.10.8.1
     default-language:    Haskell2010
     ghc-options:         -Wall -O3 -rtsopts
 
 test-suite false-test
-    hs-source-dirs:      test/shellutils/false/
+    hs-source-dirs:      test/false, src/false
     main-is:             falseSpec.hs
+    other-modules:       False
     type:                exitcode-stdio-1.0
     default-language:    Haskell2010
     ghc-options:         -Wall
     build-tool-depends: hspec-discover:hspec-discover == 2.*
-    build-depends: base,  hspec, hspec-core
+    build-depends: base, hspec, hspec-core

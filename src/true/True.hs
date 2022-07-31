@@ -1,22 +1,22 @@
 {-|
-Module      : Main
-Description : false command main module in hs-coreutils
+Module      : True
+Description : true command main module in hs-coreutils
 Copyright   : (c) Naohiro CHIKAMATSU, 2022
 License     : MIT
 Maintainer  : n.chika156@gmail.com
 Stability   : experimental
 Portability : POSIX
 -}
-module Main where
+module True where
 
-import System.Environment
+import System.Environment()
 import System.Exit
 
--- |The 'usage' print usage mesage for false command.
+-- |The 'usage' print usage mesage for true command.
 usage :: IO ()
 usage =
   putStrLn
-    "Usage: false [OPTION]\n\
+    "Usage: true [OPTION]\n\
     \       -h, --help        Print help message\n\
     \       -v, --version     Print version\n\
     \\n\
@@ -26,19 +26,19 @@ usage =
     \URL   :https://github.com/nao1215/hs-coreutils\n\
     \Author: Naohiro CHIKAMATSU"
 
--- |The 'version' print false command version.
+-- |The 'version' print true command version.
 version :: IO ()
 version = putStrLn "version 0.1.0"
 
--- |The 'main' is entrypoint for false command.
-main :: IO ()
-main = do
-  args <- getArgs
+-- |The 'run' start true command.
+run :: [String] -> IO ()
+run args
+  = do
   if null args
-    then System.Exit.exitFailure
+    then System.Exit.exitSuccess
     else case head args of
-      "-h" -> usage >> System.Exit.exitFailure
-      "--help" -> usage >> System.Exit.exitFailure
-      "-v" -> version >> System.Exit.exitFailure
-      "--version" -> version >> System.Exit.exitFailure
-      _ -> System.Exit.exitFailure
+      "-h" -> usage >> System.Exit.exitSuccess
+      "--help" -> usage >> System.Exit.exitSuccess
+      "-v" -> version >> System.Exit.exitSuccess
+      "--version" -> version >> System.Exit.exitSuccess
+      _ -> System.Exit.exitSuccess
