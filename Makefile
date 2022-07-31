@@ -11,7 +11,7 @@ doc:  ## Generate haddock document
 install: ## Install coreutils written in haskell
 	stack install
 
-test: ## Unit test
+test: build## Unit test
 	stack test
 
 .DEFAULT_GOAL := help
